@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/styles.css">
-    <title>Document</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Matrix</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    Hello world!
+  <div class="app-container">
+    <h1 class="app-title">Color Matrix</h1>
+    
+    <div id="grid" class="grid-container"></div>
+    
+    <div class="controls">
+      <div class="slider-container">
+        <label for="gridDensity" class="slider-label">Grid Density</label>
+        <input type="range" id="gridDensity" class="slider" min="5" max="50" value="15">
+      </div>
 
-    <script src="js/app.js"></script>
+      <div class="theme-buttons">
+        <button class="theme-button" id="carbon">Carbon</button>
+        <button class="theme-button" id="vaporwave">Vaporwave</button>
+        <button class="theme-button" id="cyber">Cyber</button>
+        <button class="theme-button" id="neon">Neon</button>
+        <button class="theme-button" id="print">Print</button>
+        <button class="theme-button" id="ocean">Ocean</button>
+      </div>
+      
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
 </body>
 </html>

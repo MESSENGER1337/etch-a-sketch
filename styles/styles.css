@@ -1,4 +1,143 @@
+/* Importing Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    background: black;
-    color: white;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff; /* White background for the app */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.app-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  width: 80%;
+  max-width: 800px;
+  min-width: 600px;
+  height: auto;
+  text-align: center;
+}
+
+.app-title {
+  font-size: 2.5em;
+  color: #333;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-gap: 1px;
+  margin-bottom: 20px;
+  background-color: #ddd;
+  width: 100%;
+  height: 60vh;
+}
+
+.grid-container div {
+  background: #ccc;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.grid-container div.clicked {
+  background: #ff4081;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+.slider-container {
+  width: 100%;
+  text-align: center;
+}
+
+.slider-label {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.slider {
+  width: 100%;
+  height: 20px; /* Thicker slider */
+  background: #ddd;
+  border-radius: 10px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.slider::-webkit-slider-thumb {
+  background: #555;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.theme-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px; /* Increased gap */
+  justify-content: center;
+}
+
+.theme-button {
+  background: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 15px; /* Smaller padding for minimalist look */
+  cursor: pointer;
+  font-size: 0.9em; /* Smaller font size */
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+}
+
+.theme-button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Theme color adjustments */
+.theme-carbon {
+  background-color: #2E2E2E;
+  grid-color: #FF5722; /* Bright blood orange */
+  active-color: #ffffff; /* White for active cells */
+}
+
+.theme-vaporwave {
+  background-color: #ff4dd2; /* Soft pink background */
+  grid-color: #5cc9a3; /* Seafoam green */
+  active-color: #b28eeb; /* Lavender for active cells */
+}
+
+.theme-cyber {
+  background-color: #000000; /* Black background */
+  grid-color: #999999; /* Gray grid cells */
+  active-color: #00FF00; /* Neon green active cells */
+}
+
+.theme-print {
+  background-color: #F5F5F5;
+  grid-color: #B0BEC5;
+  active-color: #1E2A47; /* Dark blue */
+}
+
+.theme-ocean {
+  background-color: #1E2A47;
+  grid-color: #3C4C74;
+  active-color: #1E88E5; /* Light blue */
 }
